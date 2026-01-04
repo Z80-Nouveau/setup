@@ -1,9 +1,11 @@
 # Installing everything needed for Z80-Nouveau development
 
-Other than for the task of programming the FPGA with a Raspberry PI, the following should work on most Linux systems.
+
+The following should work on most Linux systems.
 You might have to change the `apt` commands to use your system's package manager if you are not using a Debian style system.
 
 The following commands have been verified on a Raspberry PI configured as described here: https://github.com/johnwinans/raspberry-pi-install
+
 
 ```
 sudo apt install build-essential libi2c-dev z80asm cpmtools
@@ -37,11 +39,10 @@ BOOT_MSG=Z80 Nouveau
 SD_HOSTNAME=nouveau
 SD_DEV=/dev/sdb1
 EOF
-
 make world
 
 cd ~/fpga/2067-Z8S180/fpga/nouveau-vdp99
 make world
-make prog
+make prog                              # only works on a PI connected to a 2057-ICE40HX4K-TQ144-breakout board
 minicom -D /dev/ttyAMA0
 ```
