@@ -15,6 +15,7 @@ sudo apt install minicom
 GIT_RETRO=http://github.com/Z80-Retro
 GIT_WINANS=http://github.com/johnwinans
 
+# Use these if you want ssh access or change them to your own forks
 #GIT_RETRO=git@github.com:Z80-Retro
 #GIT_WINANS=git@github.com:johnwinans
 
